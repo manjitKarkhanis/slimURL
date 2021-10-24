@@ -1,0 +1,21 @@
+{
+  "name": "slimurl",
+  "version": "1.0.0",
+  "description": "A URL shortener service built using Express JS and MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js",
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manjit Karkhanis",
+  "license": "ISC",
+  "dependencies": {
+    "base62": "^2.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
