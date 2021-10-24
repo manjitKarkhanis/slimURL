@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const config = require('./config');
 const base62 = require('./base62.js');
 const Url = require('./models/url');
-const url = require("url");
 
 const app = express()
 mongoose.connect(config.db.connectionString);
@@ -63,6 +62,6 @@ app.get("/:encoded_id", (req, res) => {
     });
 })
 
-app.listen(3000, function(){
-    console.log("Server listening on port 3000");
+app.listen(process.env.PORT || 3000, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 })
